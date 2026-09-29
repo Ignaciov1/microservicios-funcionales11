@@ -3,13 +3,11 @@
 # Actividad 1.6 - Arquitectura Cloud ARY1102
 # ============================================
 # Uso en EC2: docker compose -f docker-compose.aws.yml up -d
-# Nota: Reemplazar <ACCOUNT_ID> y <REGION> con valores reales
-# Nota: Reemplazar <DB_HOST> con IP privada del EC2 MySQL
 
 services:
   # Frontend (Nginx + HTML/CSS/JS)
   frontend:
-    image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/escolaronline-frontend:latest
+    image: 314870398011.dkr.ecr.us-east-1.amazonaws.com/escolaronline-frontend:latest
     container_name: escolaronline-frontend
     ports:
       - "80:80"
@@ -23,12 +21,12 @@ services:
 
   # Microservicio: Consultar productos (GET)
   get-products:
-    image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/escolaronline-get-products:latest
+    image: 314870398011.dkr.ecr.us-east-1.amazonaws.com/escolaronline-get-products:latest
     container_name: escolaronline-get-products
     ports:
       - "3001:3001"
     environment:
-      DB_HOST: <DB_HOST>
+      DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
       DB_NAME: escolar_online
@@ -39,12 +37,12 @@ services:
 
   # Microservicio: Crear producto (POST)
   create-product:
-    image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/escolaronline-create-product:latest
+    image: 314870398011.dkr.ecr.us-east-1.amazonaws.com/escolaronline-create-product:latest
     container_name: escolaronline-create-product
     ports:
       - "3002:3002"
     environment:
-      DB_HOST: <DB_HOST>
+      DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
       DB_NAME: escolar_online
@@ -55,12 +53,12 @@ services:
 
   # Microservicio: Modificar producto (PUT)
   update-product:
-    image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/escolaronline-update-product:latest
+    image: 314870398011.dkr.ecr.us-east-1.amazonaws.com/escolaronline-update-product:latest
     container_name: escolaronline-update-product
     ports:
       - "3003:3003"
     environment:
-      DB_HOST: <DB_HOST>
+      DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
       DB_NAME: escolar_online
@@ -71,12 +69,12 @@ services:
 
   # Microservicio: Eliminar producto (DELETE)
   delete-product:
-    image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/escolaronline-delete-product:latest
+    image: 314870398011.dkr.ecr.us-east-1.amazonaws.com/escolaronline-delete-product:latest
     container_name: escolaronline-delete-product
     ports:
       - "3004:3004"
     environment:
-      DB_HOST: <DB_HOST>
+      DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
       DB_NAME: escolar_online
@@ -88,5 +86,3 @@ services:
 networks:
   escolaronline-net:
     driver: bridge
-
-# 2026 - Disenador asignatura: Ignacio A. Pastenet M.
