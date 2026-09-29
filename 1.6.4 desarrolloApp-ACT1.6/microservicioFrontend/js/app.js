@@ -8,10 +8,10 @@ const API_BASE = window.location.hostname === 'localhost'
     ? 'http://localhost' 
     : window.location.origin;
 
-const API_GET = API_BASE + ':3001/api/products';
-const API_POST = API_BASE + ':3002/api/products';
-const API_PUT = API_BASE + ':3003/api/products';
-const API_DELETE = API_BASE + ':3004/api/products';
+const API_GET = '/api/products';
+const API_POST = '/api/products';
+const API_PUT = '/api/products';
+const API_DELETE = '/api/products';
 
 // Cargar productos al iniciar
 document.addEventListener('DOMContentLoaded', cargarProductos);
