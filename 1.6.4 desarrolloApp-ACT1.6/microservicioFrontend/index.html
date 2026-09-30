@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EscolarOnline - Catalogo de Productos Escolares</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4DA;</text></svg>">
+    <title>FreshBox SpA - Catálogo de Productos Orgánicos</title>
+    <!-- Icono de pestaña actualizado a una hoja verde para representar productos saludables -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F343;</text></svg>">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>EscolarOnline</h1>
-        <p>Gestion CRUD de Productos Escolares - Docker + EC2 + MySQL</p>
+        <h1>FreshBox SpA</h1>
+        <p>Gestión CRUD de Productos Orgánicos y Saludables - Docker + EC2 + MySQL</p>
     </header>
     <main>
         <section id="productos-section">
-            <h2>Listado de Productos</h2>
-            <button id="btn-cargar" onclick="cargarProductos()">Cargar productos</button>
+            <h2>Catálogo de Productos</h2>
+            <button id="btn-cargar" onclick="cargarProductos()">Cargar catálogo</button>
             <table id="tabla-productos">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Descripcion</th>
+                        <th>Descripción</th>
                         <th>Precio</th>
                         <th>Stock</th>
-                        <th>Categoria</th>
+                        <th>Categoría</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -40,7 +41,7 @@
                     <input type="text" id="nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Descripcion:</label>
+                    <label for="descripcion">Descripción:</label>
                     <textarea id="descripcion" rows="2"></textarea>
                 </div>
                 <div class="form-group">
@@ -52,7 +53,7 @@
                     <input type="number" id="stock" min="0" required>
                 </div>
                 <div class="form-group">
-                    <label for="categoria">Categoria:</label>
+                    <label for="categoria">Categoría:</label>
                     <input type="text" id="categoria">
                 </div>
                 <div class="form-actions">
@@ -64,7 +65,7 @@
         </section>
     </main>
     <footer>
-        <p>EscolarOnline - Actividad 1.6 - ARY1102 Arquitectura Cloud - DuocUC 2026 | Dise&#241;ador asignatura: Ignacio A. Pastenet M.</p>
+        <p>FreshBox SpA - Evaluación Parcial 1 - ARY1102 Arquitectura Cloud - Duoc UC 2026</p>
     </footer>
     <script src="js/app.js"></script>
 </body>
