@@ -5,7 +5,7 @@
 
 -- NOTA: Se mantiene el nombre de BD 'escolar_online' internamente
 -- para garantizar la compatibilidad con los microservicios backend Node.js
-CREATE DATABASE IF NOT EXISTS escolar_online;
+CREATE DATABASE IF NOT EXISTS escolar_online DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE escolar_online;
 
 -- Tabla de productos del catálogo online
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS productos (
     imagen_url VARCHAR(500),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Datos de prueba iniciales para FreshBox SpA
 INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
