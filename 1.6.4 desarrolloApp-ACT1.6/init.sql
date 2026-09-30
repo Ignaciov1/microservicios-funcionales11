@@ -1,12 +1,14 @@
 -- ============================================
--- EscolarOnline - Base de Datos
+-- FreshBox SpA - Catálogo de Productos Orgánicos
 -- Actividad 1.6 - Arquitectura Cloud ARY1102
 -- ============================================
 
+-- NOTA: Se mantiene el nombre de BD 'escolar_online' internamente
+-- para garantizar la compatibilidad con los microservicios backend Node.js
 CREATE DATABASE IF NOT EXISTS escolar_online;
 USE escolar_online;
 
--- Tabla de productos escolares
+-- Tabla de productos del catálogo online
 CREATE TABLE IF NOT EXISTS productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -19,12 +21,12 @@ CREATE TABLE IF NOT EXISTS productos (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Datos de prueba: 10 productos escolares
+-- Datos de prueba iniciales para FreshBox SpA
 INSERT INTO productos (nombre, descripcion, precio, stock, categoria) VALUES
-('Cuaderno universitario 100 hojas', 'Cuaderno matematicas cuadro grande, tapa dura, 100 hojas', 2990.00, 150, 'Cuadernos'),
-('Mochila escolar reforzada', 'Mochila con compartimentos, material resistente al agua, correas acolchadas', 24990.00, 45, 'Mochilas'),
-('Set 12 lapices de colores', 'Lapices de colores profesionales, mina suave, 12 unidades', 4990.00, 200, 'Lapices'),
-('Calculadora cientifica', 'Calculadora cientifica 240 funciones, pantalla LCD, incluye tapa protectora', 12990.00, 60, 'Tecnologia'),
-('Estuche escolar doble cierre', 'Estuche amplio con doble compartimento y cierre metalico', 6990.00, 80, 'Estuches');
+('Manzanas Fuji Orgánicas 1kg', 'Manzanas frescas cultivadas sin pesticidas, dulces y crujientes.', 2500.00, 100, 'Frutas'),
+('Mix de Verduras de Temporada', 'Canasta con 5kg de verduras variadas directo del huerto local.', 12990.00, 45, 'Verduras'),
+('Snack de Frutos Secos Premium 250g', 'Mix de almendras, nueces y maravillas sin sal ni aceites añadidos.', 4500.00, 200, 'Snacks'),
+('Jugo Natural de Arándanos 1L', 'Jugo 100% natural prensado en frío, sin azúcar ni conservantes.', 3990.00, 60, 'Bebidas Naturales'),
+('Miel de Abeja Pura 500g', 'Miel cruda de bosque nativo, extraída de forma sostenible.', 6500.00, 80, 'Despensa Orgánica');
 
--- 2026 - Disenador asignatura: Ignacio A. Pastenet M.
+-- 2026 - Diseño de Base de Datos Arquitectura Cloud
