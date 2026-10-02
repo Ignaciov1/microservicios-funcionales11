@@ -3,8 +3,8 @@
 -- Actividad 1.6 - Arquitectura Cloud ARY1102
 -- ============================================
 
-CREATE DATABASE IF NOT EXISTS escolar_online DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE escolar_online;
+CREATE DATABASE IF NOT EXISTS freshbox_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE freshbox_db;
 
 CREATE TABLE IF NOT EXISTS productos (
     id INT AUTO_INCREMENT PRIMARY KEY,

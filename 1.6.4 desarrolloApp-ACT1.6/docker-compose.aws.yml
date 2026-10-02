@@ -29,7 +29,7 @@ services:
       DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
-      DB_NAME: escolar_online
+      DB_NAME: freshbox_db
       DB_PORT: 3306
       PORT: 3001
     networks:
@@ -45,7 +45,7 @@ services:
       DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
-      DB_NAME: escolar_online
+      DB_NAME: freshbox_db
       DB_PORT: 3306
       PORT: 3002
     networks:
@@ -61,7 +61,7 @@ services:
       DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
-      DB_NAME: escolar_online
+      DB_NAME: freshbox_db
       DB_PORT: 3306
       PORT: 3003
     networks:
@@ -77,7 +77,7 @@ services:
       DB_HOST: ${DB_HOST}
       DB_USER: alumno
       DB_PASS: alumno123
-      DB_NAME: escolar_online
+      DB_NAME: freshbox_db
       DB_PORT: 3306
       PORT: 3004
     networks:

@@ -12,7 +12,7 @@ const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'alumno',
   password: process.env.DB_PASS || 'alumno123',
-  database: process.env.DB_NAME || 'escolar_online',
+  database: process.env.DB_NAME || 'freshbox_db',
   port: process.env.DB_PORT || 3306
 };
 

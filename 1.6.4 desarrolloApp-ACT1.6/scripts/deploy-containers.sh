@@ -45,7 +45,7 @@ docker run -d --name escolaronline-get-products \
   -e DB_HOST=$DB_HOST \
   -e DB_USER=alumno \
   -e DB_PASS=alumno123 \
-  -e DB_NAME=escolar_online \
+  -e DB_NAME=freshbox_db \
   -e DB_PORT=3306 \
   -e PORT=3001 \
   $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/escolaronline-get-products:latest
@@ -57,7 +57,7 @@ docker run -d --name escolaronline-create-product \
   -e DB_HOST=$DB_HOST \
   -e DB_USER=alumno \
   -e DB_PASS=alumno123 \
-  -e DB_NAME=escolar_online \
+  -e DB_NAME=freshbox_db \
   -e DB_PORT=3306 \
   -e PORT=3002 \
   $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/escolaronline-create-product:latest
@@ -69,7 +69,7 @@ docker run -d --name escolaronline-update-product \
   -e DB_HOST=$DB_HOST \
   -e DB_USER=alumno \
   -e DB_PASS=alumno123 \
-  -e DB_NAME=escolar_online \
+  -e DB_NAME=freshbox_db \
   -e DB_PORT=3306 \
   -e PORT=3003 \
   $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/escolaronline-update-product:latest
@@ -81,7 +81,7 @@ docker run -d --name escolaronline-delete-product \
   -e DB_HOST=$DB_HOST \
   -e DB_USER=alumno \
   -e DB_PASS=alumno123 \
-  -e DB_NAME=escolar_online \
+  -e DB_NAME=freshbox_db \
   -e DB_PORT=3306 \
   -e PORT=3004 \
   $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/escolaronline-delete-product:latest

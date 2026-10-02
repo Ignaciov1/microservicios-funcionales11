@@ -58,7 +58,7 @@ desarrolloApp-ACT1.6/
 | DB_HOST | Host de MySQL | db | (IP privada EC2 MySQL) |
 | DB_USER | Usuario BD | alumno | alumno |
 | DB_PASS | Password BD | alumno123 | alumno123 |
-| DB_NAME | Nombre BD | escolar_online | escolar_online |
+| DB_NAME | Nombre BD | freshbox_db | freshbox_db |
 | DB_PORT | Puerto BD | 3306 | 3306 |
 
 ## Datos de Prueba (init.sql)
@@ -107,7 +107,7 @@ Resultado esperado: 6 servicios (db, frontend, get-products, create-product, upd
 ## Paso 4: Verificar base de datos
 
 ```bash
-docker exec -it escolaronline-db mysql -u alumno -palumno123 -e "SELECT * FROM escolar_online.productos;"
+docker exec -it escolaronline-db mysql -u alumno -palumno123 -e "SELECT * FROM freshbox_db.productos;"
 ```
 
 Resultado esperado: tabla con 5 productos escolares.
